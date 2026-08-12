@@ -2,8 +2,8 @@ package com.example.demo.service;
 
 public class GreetingService {
 
-    public bollean message() {
-        return true;
+    public String message() {
+        return 10;
     }
 
 }
