@@ -22,4 +22,9 @@ public class UserController {
     public String getName(@PathVariable Long id) {
         return service.getUserName(id);
     }
+
+    @GetMapping("/{id}/email")
+    public String getEmail(@PathVariable Long id) {
+        return service.getUserEmail(id);
+    }
 }

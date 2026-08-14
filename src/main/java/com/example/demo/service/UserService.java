@@ -11,11 +11,13 @@ public class UserService {
         this.repository = repository;
     }
 
-    public String getUser(Long id) {
-        return repository.findById(id).getName();
+    public String getUserName(Long id) {
+        User user = repository.findById(id);
+        return user.getUserName();
     }
 
-    public String getUserName(Long id) {
-        return repository.findById(id).getName();
+    public String getUserEmail(Long id) {
+        User user = repository.findById(id);
+        return user.getEmailAddress();
     }
 }
