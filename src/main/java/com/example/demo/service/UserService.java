@@ -11,7 +11,11 @@ public class UserService {
         this.repository = repository;
     }
 
+    public String getUser(Long id) {
+        return repository.findById(id).getName();
+    }
+
     public String getUserName(Long id) {
-        return repository.findById(id).getNonExistingName();
+        return repository.findById(id).getName();
     }
 }
