@@ -22,9 +22,4 @@ public class UserController {
     public String getName(@PathVariable Long id) {
         return service.getUserName(id);
     }
-
-    @GetMapping("/{id}/broken")
-    public MissingResponse broken(@PathVariable Long id) {
-        return null;
-    }
 }
