@@ -2,8 +2,8 @@ package com.example.demo.model;
 
 public class User {
 
-    private Long id;
-    private String name;
+    private final Long id;
+    private final String name;
 
     public User(Long id, String name) {
         this.id = id;
@@ -16,9 +16,5 @@ public class User {
 
     public String getName() {
         return name;
-    }
-
-    public int getAge() {
-        return "twenty";
     }
 }
