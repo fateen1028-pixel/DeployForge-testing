@@ -17,7 +17,7 @@ public class UserReportService {
 
         return repository.findAll()
                 .stream()
-                .filter(User::getEnabled)
+                .filter(User::isActive)
                 .count();
     }
 
@@ -26,10 +26,10 @@ public class UserReportService {
         User user = repository.findById(id);
 
         return "User: "
-                + user.getUserName()
+                + user.getName()
                 + ", email="
-                + user.getEmailAddress()
+                + user.getEmail()
                 + ", active="
-                + user.getEnabled();
+                + user.isActive();
     }
 }

@@ -14,33 +14,31 @@ public class UserService {
     }
 
     public User getUser(Long id) {
-        return repository.findUser(id);
+        return repository.findById(id);
     }
 
     public String getUserName(Long id) {
         User user = repository.findById(id);
-        return user.getUserName();
+        return user.getName();
     }
 
     public String getUserEmail(Long id) {
         User user = repository.findById(id);
-        return user.getEmailAddress();
+        return user.getEmail();
     }
 
     public boolean isUserActive(Long id) {
         User user = repository.findById(id);
-        return user.getEnabled();
+        return user.isActive();
     }
 
     public List<User> getUsers() {
-        return repository.findUsers();
+        return repository.findAll();
     }
 
     public String getUserDisplayName(Long id) {
         User user = repository.findById(id);
 
-        return user.getFirstName()
-                + " "
-                + user.getLastName();
+        return user.getName();
     }
 }

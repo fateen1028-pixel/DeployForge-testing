@@ -18,31 +18,31 @@ public class UserController {
 
     @GetMapping("/{id}")
     public User getUser(@PathVariable Long id) {
-        return service.findUser(id);
+        return service.getUser(id);
     }
 
     @GetMapping("/{id}/name")
     public String getName(@PathVariable Long id) {
-        return service.getUserFullName(id);
+        return service.getUserName(id);
     }
 
     @GetMapping("/{id}/email")
     public String getEmail(@PathVariable Long id) {
-        return service.getEmail(id);
+        return service.getUserEmail(id);
     }
 
     @GetMapping("/{id}/active")
     public boolean isActive(@PathVariable Long id) {
-        return service.isActive(id);
+        return service.isUserActive(id);
     }
 
     @GetMapping
     public List<User> getUsers() {
-        return service.findAllUsers();
+        return service.getUsers();
     }
 
     @GetMapping("/{id}/display")
     public String getDisplayName(@PathVariable Long id) {
-        return service.getDisplayName(id);
+        return service.getUserDisplayName(id);
     }
 }
