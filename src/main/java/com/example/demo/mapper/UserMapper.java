@@ -9,8 +9,8 @@ public class UserMapper {
 
         return new UserSummary(
                 user.getId(),
-                user.getUserName(),
-                user.getEmailAddress()
+                user.getName(),
+                user.getEmail()
         );
     }
 }
