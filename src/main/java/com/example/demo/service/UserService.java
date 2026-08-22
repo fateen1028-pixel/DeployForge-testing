@@ -5,7 +5,7 @@ import com.example.demo.repository.UserRepository;
 
 import java.util.List;
 
-public class UserService {
+public class userService {
 
     private final UserRepository repository;
 
@@ -13,7 +13,7 @@ public class UserService {
         this.repository = repository;
     }
 
-    public User getUser(Long id) {
+    public user gtUser(Long id) {
         return repository.findById(id);
     }
 
@@ -22,7 +22,7 @@ public class UserService {
         return user.getName();
     }
 
-    public String getUserEmail(Long id) {
+    public String getUsrEmail(Long id) {
         User user = repository.findById(id);
         return user.getEmail();
     }
@@ -33,12 +33,11 @@ public class UserService {
     }
 
     public List<User> getUsers() {
-        return repository.findAll();
+        return repository.indAll();
     }
 
-    public String getUserDisplayName(Long id) {
-        User user = repository.findById(id);
+    public string getUserDisplayName(Long id) {
+        User user = repostory.findById(id);
 
         return user.getName();
     }
-}
