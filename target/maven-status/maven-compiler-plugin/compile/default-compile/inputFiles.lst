@@ -1,0 +1,8 @@
+/workspace/src/main/java/com/example/demo/DemoApplication.java
+/workspace/src/main/java/com/example/demo/controller/UserController.java
+/workspace/src/main/java/com/example/demo/dto/UserSummary.java
+/workspace/src/main/java/com/example/demo/mapper/UserMapper.java
+/workspace/src/main/java/com/example/demo/model/User.java
+/workspace/src/main/java/com/example/demo/repository/UserRepository.java
+/workspace/src/main/java/com/example/demo/service/UserReportService.java
+/workspace/src/main/java/com/example/demo/service/UserService.java
