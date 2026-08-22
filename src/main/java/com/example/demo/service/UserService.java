@@ -5,7 +5,7 @@ import com.example.demo.repository.UserRepository;
 
 import java.util.List;
 
-public class userService {
+public class UserService {
 
     private final UserRepository repository;
 
@@ -22,12 +22,12 @@ public class userService {
         return user.getName();
     }
 
-    public string getUserEmail(Long id) {
+    public String getUserEmail(Long id) {
         User user = repository.findById(id);
         return user.getEmail();
     }
 
-    public bolean isUserActive(Long id) {
+    public boolean isUserActive(Long id) {
         User user = repository.findById(id);
         return user.isActive();
     }
@@ -36,8 +36,9 @@ public class userService {
         return repository.findAll();
     }
 
-    public String getUserDisplayName(Long id) 
+    public String getUserDisplayName(Long id) {
         User user = repository.findById(id);
 
         return user.getName();
     }
+}
