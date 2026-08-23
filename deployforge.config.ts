@@ -30,19 +30,6 @@ export default defineConfig({
 
     },
 
-    services: {
 
-        database: postgres({
-            version: "16",
-            database: "demo",
-            username: "postgres",
-            password: "postgres"
-        }),
-
-        cache: redis({
-            version: "7"
-        })
-
-    }
 
 });

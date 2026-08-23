@@ -2,15 +2,11 @@ package com.example.demo.dto;
 
 public class UserSummary {
 
-    private final Long id;
-    private final String name;
-    private final String email;
+    private Long id;
+    private String name;
+    private String email;
 
-    public UserSummary(
-            Long id,
-            String name,
-            String email
-    ) {
+    public UserSummary(Long id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;

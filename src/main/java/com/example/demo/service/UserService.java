@@ -1,11 +1,16 @@
 package com.example.demo.service;
 
+
+
 import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class userService {
+
+@Service
+public class UserService {
 
     private final UserRepository repository;
 
@@ -13,7 +18,7 @@ public class userService {
         this.repository = repository;
     }
 
-    public user gtUser(Long id) {
+    public User getUser(Long id) {
         return repository.findById(id);
     }
 
@@ -22,7 +27,7 @@ public class userService {
         return user.getName();
     }
 
-    public String getUsrEmail(Long id) {
+    public String getUserEmail(Long id) {
         User user = repository.findById(id);
         return user.getEmail();
     }
@@ -33,11 +38,11 @@ public class userService {
     }
 
     public List<User> getUsers() {
-        return repository.indAll();
+        return repository.findAll();
     }
 
-    public string getUserDisplayName(Long id) {
-        User user = repostory.findById(id);
-
+    public String getUserDisplayName(Long id) {
+        User user = repository.findById(id);
         return user.getName();
     }
+}
